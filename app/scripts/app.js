@@ -1,14 +1,5 @@
 'use strict';
-
-/**
- * @ngdoc overview
- * @name cvBuilderApp
- * @description
- * # cvBuilderApp
- *
- * Main module of the application.
- */
-angular
+var app = angular
   .module('cvBuilderApp', [
     'ngAnimate',
     'ngCookies',
@@ -31,3 +22,38 @@ angular
         redirectTo: '/'
       });
   });
+
+
+app.controller('appCtrl', function($scope){
+  $scope.contenteditable = {
+    initialValue : false
+  }
+});
+
+app.directive('testDirective', function($timeout) {
+  return {
+    restrict: 'E',
+    scope: {
+      contenteditable : '='
+    },
+
+    link: function( scope, elem, attrs, controller ) {
+      var el = elem[0];
+
+      var updateContent = function() {
+        el.innerText = 'contenteditable=' + scope.contenteditable;
+      };
+
+      updateContent();
+
+      scope.$watch('contenteditable', function(newValue, oldValue){
+        console.log('contenteditable has changed', newValue);
+      });
+
+      $timeout(function(){
+        scope.contenteditable = true;
+      }, 2000);
+
+    }
+  }
+});

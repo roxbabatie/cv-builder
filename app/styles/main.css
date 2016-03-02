@@ -1,83 +1,151 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-body {
+ul {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+h1 {
+  font-size: 20px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+h3 {
+  font-size: 16px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+header {
+  position: fixed;
+  z-index: 5;
+  width: 97.8%;
+  background-color: #cbbab7;
+  font-size: 20px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+ul {
+  list-style: none;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+body {
+  background-color: #E6E6E6;
+}
+
+.cv-title1 {
+  font-weight: bolder;
+  padding: 5px 40px;
+  color: #DADADA;
+}
+
+.cv-title2 {
+  background-color: #DADADA;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.sidebar {
+  width: 32.59%;
+  position: fixed;
+  top: 28px;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+  background-color: #DADADA;
+  height: 100%;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.content {
+  top: 28px;
+  left: 33.333333%;
+  text-align: left;
+  background-color: #E6E6E6;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.picture-div {
+  text-align: center;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.picture {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  background-color: #E6E6E6;
+  border: 3px solid #cbbab7;
+  border-radius: 5px;
+}
+
+.name-bubble {
+  display: inline-block;
+  color: white;
+  background-color: #2B798D;
+  border: 1px solid #2B798D;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 5px 20px;
+}
+
+.title1 {
+  font-size:14px;
+  color: #a99895;
+  margin: 5px 0;
+}
+
+.title2 {
+  color: #2B798D;
+  font-weight: bolder;
+  margin: 5px 0px 5px 40px;
+}
+
+.details-div {
+  margin-top: 25px;
+}
+
+.text-bubble {
+  display: inline-block;
+  color: white;
+  font-weight: bolder;
+  background-color: #2B798D;
+  border: 1px solid #2B798D;
+  border-radius: 10px;
+  margin: 0 0 15px 0;
+  padding: 5px 20px;
+}
+
+.e-div {
+  text-align: left;
+  border: 1px solid #cbbab7;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 5px 20px;
+}
+
+.e1 ul li {
+  margin: 5px 0;
+}
+
+.e1 ul li strong:not(.d) {
+  display: inline-block;
+  width: 80%;
+  border: 1px solid #cbbab7;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.e1 ul li:last-child {
+  padding-bottom: 30px;
+}
+
+.d {
+  display: inline-block;
+  width: 20%;
+  border: 1px solid #cbbab7;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.mentions {
+  height: 150px;
+  border: 1px solid #cbbab7;
+  border-radius: 5px;
+}
+
+.menu {
+  float: right;
+  margin-right: 20px;
+  color: #2B798D;
 }

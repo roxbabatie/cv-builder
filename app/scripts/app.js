@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('cvBuilderApp', [
     'ngAnimate',
     'ngCookies',
@@ -16,18 +16,25 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  ]);
+
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/main.html',
+      controller: 'MainCtrl'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutCtrl'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
+
+

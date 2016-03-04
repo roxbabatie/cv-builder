@@ -1,4 +1,4 @@
-<div class="container col-md-12">
+<div class="container col-md-12" ng-controller="MainCtrl">
   <div class="menu">
     <span class="caret"></span>
     <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
@@ -9,7 +9,7 @@
     <div>
       <div>
         <h3 class="title3">Name</h3>
-        <h1 class="name-bubble"><span>Enter name here...<span></h1>
+        <p class="name-bubble" contenteditable="true" ng-model="text"></p>
       </div>
       <div class="picture-div">
         <span class="picture"></span>
@@ -18,19 +18,19 @@
     <div class="details-div">
       <div>
         <h3 class="title1">Address</h3>
-        <p class="text-bubble">Enter address here...</p>
+        <p class="text-bubble" contenteditable="true" ng-model="text"></p>
       </div>
       <div>
         <h3 class="title1">Email</h3>
-        <p class="text-bubble">Enter email here...</p>
+        <p class="text-bubble" contenteditable="true" ng-model="text"></p>
       </div>
       <div>
         <h3 class="title1">Telephone</h3>
-        <p class="text-bubble">Enter telephone no. here...</p>
+        <p class="text-bubble" contenteditable="true" ng-model="text"></p>
       </div>
       <div>
         <h3 class="title1">Instant Messaging</h3>
-        <p class="text-bubble">Enter messaging methods here...</p>
+        <p class="text-bubble" contenteditable="true" ng-model="text"></p>
       </div>
       <div>
         <h3 class="title1">Driver's License</h3>
@@ -46,7 +46,7 @@
   <div class="content shadow col-md-5">
     <div>
       <div>
-        <h3 class="title2"><span>Experience<span></h3>
+        <h3 class="title2"><span>Experience</span></h3>
       </div>
       <ul>
         <li class="e-div e1">
@@ -58,26 +58,26 @@
           </div>
           <div>
             <span>Occupied position:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Employer:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Location:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Description:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
         </li>
       </ul>
     </div>
     <div>
       <div>
-        <h3 class="title2"><span>Education<span></h3>
+        <h3 class="title2"><span>Education</span></h3>
       </div>
       <ul>
         <li class="e-div e1">
@@ -89,60 +89,60 @@
           </div>
           <div>
             <span>Title:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Institution:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Location:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
           <div>
             <span>Description:</span>
-            <strong> ...</strong>
+            <p contenteditable="true" ng-model="text"></p>
           </div>
         </li>
       </ul>
     </div>
     <div>
       <div>
-        <h3 class="title2"><span>Languages<span></h3>
+        <h3 class="title2"><span>Languages</span></h3>
       </div>
       <ul class="e-div">
         <li>
           <div>
             <span>Language</span>
-            <strong class="d"> ...</strong>
+            <p class="d" contenteditable="true" ng-model="text"></p>
             <span>Level</span>
-            <strong class="d"> ...</strong>
+            <p class="d" contenteditable="true" ng-model="text"></p>
           </div>
         </li>
       </ul>
     </div>
     <div>
       <div>
-        <h3 class="title2"><span>Aptitudes<span></h3>
+        <h3 class="title2"><span>Aptitudes</span></h3>
       </div>
       <ul class="e-div">
         <li>
           <div>
             <span>Skill Area</span>
-            <strong class="d"> ...</strong>
+            <p class="d" contenteditable="true" ng-model="text"></p>
             <span>Actual Skill</span>
-            <strong class="d"> ...</strong>
+            <p class="d" contenteditable="true" ng-model="text"></p>
           </div>
         </li>
       </ul>
     </div>
     <div>
       <div>
-        <h3 class="title2"><span>Mentions<span></h3>
+        <h3 class="title2"><span>Mentions</span></h3>
       </div>
       <div class="e-div">
-        <div class="mentions">
-        </div>
+        <p class="mentions" contenteditable="true" ng-model="text">
+        </p>
       </div>
     </div>
   </div>

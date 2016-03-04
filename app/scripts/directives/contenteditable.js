@@ -15,33 +15,41 @@ app.directive("contenteditable", function() {
         scope.$apply(read);
       });
 
-      element.bind("click", function() {
-        element.removeClass("initial-class");
+      element.bind("click", function(e) {
+        e.toElement.focus(function () {
+          console.log(this);
+          if ($(this).text() === "Type your text in here...") {
+            $(this).text("");
+          }
+        });
         element.removeClass("hover-class");
         element.addClass("focus-class");
       });
 
       element.bind("mouseenter", function() {
-        if(element.hasClass("focus-class" )){
-          element.removeClass("hover-class")
-        }else {
-          element.removeClass("initial-class");
-          element.addClass("hover-class");
-        }
+        attrs.$observe("class", function(value){
+          if(value.indexOf("focus-class") !== -1){
+            element.removeClass("hover-class");
+          }else {
+            element.addClass("hover-class");
+          }
+          })
       });
 
       element.bind("mouseleave", function() {
-        if(element.hasClass("hover-class")){
-          element.removeClass("hover-class")
-        }else {
-          element.removeClass("hover-class");
-          element.addClass("initial-class");
-        }
+        attrs.$observe("class", function(value){
+          if(value.indexOf("hover-class") > -1){
+            element.removeClass("hover-class");
+          }
+          if(value.indexOf("focus-class")){
+            element.removeClass("hover-class");
+          }
+        })
       });
 
       element.bind("blur", function() {
         element.removeClass("focus-class");
-        element.addClass("initial-class");
+        element.addClass("");
       });
     }
   };

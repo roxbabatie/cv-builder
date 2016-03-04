@@ -151,15 +151,15 @@ ul {
   box-shadow:         2px 1px 3px 3px #ccc;
 }
 
-.initial-class {
+/*.initial-class {
  padding: 1em;
  border-radius: 3px;
  outline: none;
  border: 2px solid transparent;
-}
+}*/
 
 .hover-class{
- background: #E6E6E6 ;
+ background: lightcoral ;
 }
 
 .focus-class  {

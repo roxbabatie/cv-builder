@@ -151,18 +151,18 @@ ul {
   box-shadow:         2px 1px 3px 3px #ccc;
 }
 
-section > div {
+.initial-class {
  padding: 1em;
  border-radius: 3px;
  outline: none;
  border: 2px solid transparent;
 }
 
-section > div[contenteditable='true']:hover{
+.hover-class{
  background: #E6E6E6 ;
 }
 
-section > div:focus, section > div:focus:hover  {
+.focus-class  {
  background: #FFF;
  border-color: #69c773 ;
  box-shadow: 0 1px 5px rgba(0,0,0,0.15) inset;

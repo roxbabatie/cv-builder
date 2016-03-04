@@ -14,4 +14,11 @@ angular.module('cvBuilderApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.text="Type your text in here...";
+    var content = $("strong");
+    content.focus(function(){
+      if($(this).text()==="Type your text in here..."){
+        $(this).text("");
+      }
+    });
   });

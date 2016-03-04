@@ -10,49 +10,36 @@ h3 {
   font-size: 16px;
 }
 
-header {
-  position: fixed;
-  z-index: 5;
-  width: 97.8%;
-  background-color: #cbbab7;
-  font-size: 20px;
-}
-
 ul {
   list-style: none;
 }
 
-body {
-  background-color: #E6E6E6;
+.container {
+  top: 50px;
 }
 
-.cv-title1 {
-  font-weight: bolder;
-  padding: 5px 40px;
-  color: #DADADA;
-}
-
-.cv-title2 {
+.cv-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -125%);
   background-color: #DADADA;
   font-size: 20px;
+  font-weight: bolder;
   padding: 0 10px;
   border-radius: 5px;
 }
 
 .sidebar {
-  width: 32.59%;
-  position: fixed;
-  top: 28px;
   text-align: center;
   background-color: #DADADA;
-  height: 100%;
+  border-radius: 5px;
 }
 
 .content {
-  top: 28px;
-  left: 33.333333%;
+  left: 30px;
   text-align: left;
   background-color: #E6E6E6;
+  border-radius: 5px;
 }
 
 .picture-div {
@@ -64,25 +51,36 @@ body {
   height: 150px;
   width: 150px;
   background-color: #E6E6E6;
-  border: 3px solid #cbbab7;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
 }
 
 .name-bubble {
   display: inline-block;
-  color: white;
-  background-color: #2B798D;
-  border: 1px solid #2B798D;
-  border-radius: 10px;
+  color: #2B798D;
+  border: 1px solid #e1e1e1;
+    border-radius: 5px;
   margin-top: 0;
   margin-bottom: 30px;
   padding: 5px 20px;
 }
 
 .title1 {
-  font-size:14px;
+  font-size:12px;
   color: #a99895;
-  margin: 5px 0;
+  margin: 0;
+}
+
+.title3 {
+  font-size:12px;
+  color: #a99895;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.checkbox-label {
+  font-weight: bold;
+  color: #2B798D;
 }
 
 .title2 {
@@ -97,12 +95,11 @@ body {
 
 .text-bubble {
   display: inline-block;
-  color: white;
+  color: #2B798D;
   font-weight: bolder;
-  background-color: #2B798D;
-  border: 1px solid #2B798D;
-  border-radius: 10px;
-  margin: 0 0 15px 0;
+  border: 1px solid #e1e1e1;
+    border-radius: 5px;
+  margin: 0 0 20px 0;
   padding: 5px 20px;
 }
 
@@ -114,38 +111,59 @@ body {
   padding: 5px 20px;
 }
 
-.e1 ul li {
+.e-div > div {
   margin: 5px 0;
 }
 
-.e1 ul li strong:not(.d) {
-  display: inline-block;
-  width: 80%;
-  border: 1px solid #cbbab7;
-  border-radius: 5px;
-  padding: 0 5px;
+.e-div strong {
+  margin-left: 10px;
 }
 
-.e1 ul li:last-child {
-  padding-bottom: 30px;
+.e-div > div span {
+  float: left;
 }
 
 .d {
   display: inline-block;
   width: 20%;
-  border: 1px solid #cbbab7;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
   padding: 0 5px;
 }
 
 .mentions {
   height: 150px;
-  border: 1px solid #cbbab7;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
 }
 
 .menu {
-  float: right;
-  margin-right: 20px;
+  position: absolute;
+  top: -30px;
+  right: 180px;
+  font-size: 20px;
   color: #2B798D;
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 1px 3px 3px #ccc;
+  -moz-box-shadow:    2px 1px 3px 3px #ccc;
+  box-shadow:         2px 1px 3px 3px #ccc;
+}
+
+section > div {
+ padding: 1em;
+ border-radius: 3px;
+ outline: none;
+ border: 2px solid transparent;
+}
+
+section > div[contenteditable='true']:hover{
+ background: #E6E6E6 ;
+}
+
+section > div:focus, section > div:focus:hover  {
+ background: #FFF;
+ border-color: #69c773 ;
+ box-shadow: 0 1px 5px rgba(0,0,0,0.15) inset;
 }

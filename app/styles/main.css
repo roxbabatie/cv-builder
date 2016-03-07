@@ -314,3 +314,13 @@ button {
 .e-div > li > div {
   padding: 10px 0;
 }
+
+input[type='file'] {
+  color:transparent;
+  margin-left: 138px;
+
+}
+
+.left, .right {
+  height: 620px;
+}

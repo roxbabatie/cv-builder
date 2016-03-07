@@ -1,6 +1,10 @@
 app.directive("contenteditable", function() {
   return {
     require: "ngModel",
+    restrict: 'A',
+    scope: {
+      ngModel: '='
+    },
     link: function(scope, element, attrs, ngModel) {
 
       function read() {
@@ -15,8 +19,9 @@ app.directive("contenteditable", function() {
         scope.$apply(read);
       });
 
-      element.bind("click", function(e) {
-        e.toElement.focus(function () {
+      element.bind("click", function(event) {
+        console.log(scope);
+        event.toElement.focus(function () {
           console.log(this);
           if ($(this).text() === "Type your text in here...") {
             $(this).text("");

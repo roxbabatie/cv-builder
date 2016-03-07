@@ -205,18 +205,18 @@ button {
   box-shadow:         2px 1px 3px 3px #ccc;
 }
 
-section > div {
+/*.initial-class {
  padding: 1em;
  border-radius: 3px;
  outline: none;
  border: 2px solid transparent;
+}*/
+
+.hover-class{
+ background: lightskyblue ;
 }
 
-section > div[contenteditable='true']:hover{
- background: #E6E6E6 ;
-}
-
-section > div:focus, section > div:focus:hover  {
+.focus-class  {
  background: #FFF;
  border-color: #69c773 ;
  box-shadow: 0 1px 5px rgba(0,0,0,0.15) inset;
@@ -225,7 +225,7 @@ section > div:focus, section > div:focus:hover  {
 ::-webkit-scrollbar {
     width: 6px;
 }
- 
+
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px #e1e1e1;
     -webkit-border-radius: 10px;

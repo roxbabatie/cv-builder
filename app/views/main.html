@@ -4,7 +4,7 @@
     <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
   </div>
   <div class="col-md-2"></div>
-  <div class="col-md-8 shadow doc">
+  <div class="col-md-8 shadow doc"  ng-controller="MainCtrl">
     <div class="cv-title shadow">
       <span>Untitled CV</span>
     </div>
@@ -15,7 +15,9 @@
           <h1 class="name-bubble"><span>Enter name here...<span></h1>
         </div>
         <div class="picture-div">
-          <span class="picture"></span>
+          <img class="picture" src={{personal.src}}></img>
+          <input type="file"
+                 onchange="angular.element(this).scope().imageUpload(event)"/>
         </div>
       </div>
       <div class="details-div">
@@ -61,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="content col-md-8"  ng-controller="MainCtrl">
+    <div class="content col-md-8" >
       <div>
         <div>
           <h3 class="title2"><span>Work Experience<span></h3>

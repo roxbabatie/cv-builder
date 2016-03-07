@@ -42,4 +42,14 @@ app.controller('MainCtrl', function ($scope) {
     }
   };
 
+  $scope.delete = function(label, event) {
+    var index = $(event.target).data('id')
+    if (label === 'experience'){
+      $scope.experience.splice(index, 1)
+    }
+
+  }
+
+
+
 });

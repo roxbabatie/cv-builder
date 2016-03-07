@@ -2,9 +2,7 @@ app.directive("contenteditable", function() {
   return {
     require: "ngModel",
     restrict: 'A',
-    scope: {
-      ngModel: '='
-    },
+    scope: true,
     link: function(scope, element, attrs, ngModel) {
 
       function read() {
@@ -19,14 +17,10 @@ app.directive("contenteditable", function() {
         scope.$apply(read);
       });
 
-      element.bind("click", function(event) {
-        console.log(scope);
-        event.toElement.focus(function () {
-          console.log(this);
-          if ($(this).text() === "Type your text in here...") {
+      element.bind("click", function() {
+          if ($(this).text() === "Type your text in here..." || $(this).text() === "Untitled CV") {
             $(this).text("");
           }
-        });
         element.removeClass("hover-class");
         element.addClass("focus-class");
       });

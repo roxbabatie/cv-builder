@@ -15,5 +15,6 @@ angular.module('cvBuilderApp')
       'Karma'
     ];
     $scope.text = "Type your text in here...";
+    $scope.textTitle = "Untitled CV";
   })
 ;

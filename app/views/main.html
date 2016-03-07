@@ -5,14 +5,13 @@
   </div>
   <div class="col-md-2"></div>
   <div class="col-md-8 shadow doc">
-    <div class="cv-title shadow">
-      <span>Untitled CV</span>
+    <div class="cv-title shadow" contenteditable="true" ng-model="textTitle">
     </div>
     <div class="sidebar col-md-4">
       <div>
         <div>
           <h3 class="title3">Name</h3>
-          <h1 class="name-bubble"><span>Enter name here...<span></h1>
+          <p class="name-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div class="picture-div">
           <span class="picture"></span>
@@ -24,28 +23,28 @@
             <span class="glyphicon glyphicon-home g1" aria-hidden="true"></span>
             <span class="title1">Address</span>
           </div>
-          <p class="text-bubble">Enter address here...</p>
+          <p class="text-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div>
           <div class="b-bot">
             <span class="glyphicon glyphicon-envelope g1" aria-hidden="true"></span>
             <span class="title1">Email</span>
           </div>
-          <p class="text-bubble">Enter email here...</p>
+          <p class="text-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div>
           <div class="b-bot">
             <span class="glyphicon glyphicon-earphone g1" aria-hidden="true"></span>
             <span class="title1">Telephone</span>
           </div>
-          <p class="text-bubble">Enter telephone no. here...</p>
+          <p class="text-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div>
           <div class="b-bot">
             <span class="glyphicon glyphicon-globe g1" aria-hidden="true"></span>
             <span class="title1">Instant Messaging</span>
           </div>
-          <p class="text-bubble">Enter messaging methods here...</p>
+          <p class="text-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div>
           <div class="b-bot">
@@ -78,19 +77,19 @@
             </div>
             <div class="group">
               <span class="ib2">Occupied position:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Employer:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non laoreet felis. Aliquam erat volutpat. Quisque porta sagittis nunc, eget faucibus mi fringilla id. Aliquam a risus non magna ultricies euismod.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
           </li>
         </ul>
@@ -111,19 +110,19 @@
             </div>
             <div class="group">
               <span class="ib2">Title:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Institution:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <span class="ib">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non laoreet felis. Aliquam erat volutpat. Quisque porta sagittis nunc, eget faucibus mi fringilla id. Aliquam a risus non magna ultricies euismod.</span>
+              <p class="ib" contenteditable="true" ng-model="text"></p>
             </div>
           </li>
         </ul>
@@ -138,9 +137,9 @@
             <button class="glyphicon glyphicon-minus-sign remove"></button>
             <div>
               <span class="ib3">Language</span>
-              <span class="d"> ...</span>
+              <p class="d" contenteditable="true" ng-model="text"></p>
               <span class="ib3">Level</span>
-              <span class="d"> ...</span>
+              <p class="d" contenteditable="true" ng-model="text"></p>
             </div>
           </li>
         </ul>
@@ -155,9 +154,9 @@
             <button class="glyphicon glyphicon-minus-sign remove"></button>
             <div>
               <span class="ib3">Skill Area</span>
-              <span class="d"> ...</span>
+              <p class="d" contenteditable="true" ng-model="text"></p>
               <span class="ib3">Actual Skill</span>
-              <span class="d"> ...</span>
+              <p class="d" contenteditable="true" ng-model="text"></p>
             </div>
           </li>
         </ul>
@@ -167,10 +166,9 @@
           <h3 class="title2"><span>Mentions<span></h3>
         </div>
         <div class="e-div">
-          <div class="mentions">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non laoreet felis. Aliquam erat volutpat. Quisque porta sagittis nunc, eget faucibus mi fringilla id. Aliquam a risus non magna ultricies euismod.</span>
+          <div class="mentions" contenteditable="true" ng-model="text">
           </div>
         </div>
+      </div>
     </div>
   </div>
-</div>

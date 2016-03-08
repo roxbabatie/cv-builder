@@ -7,14 +7,16 @@
   <div class="col-md-8 shadow doc">
     <div class="cv-title shadow" contenteditable="true" ng-model="textTitle">
     </div>
-    <div class="sidebar col-md-4">
+    <div class="sidebar col-md-4 left">
       <div>
         <div>
           <h3 class="title3">Name</h3>
           <p class="name-bubble" contenteditable="true" ng-model="text"></p>
         </div>
         <div class="picture-div">
-          <span class="picture"></span>
+          <img class="picture" src={{personal.src}}></img>
+          <input type="file"
+                 onchange="angular.element(this).scope().imageUpload(event)"/>
         </div>
       </div>
       <div class="details-div">
@@ -60,15 +62,15 @@
         </div>
       </div>
     </div>
-    <div class="content col-md-8">
+    <div class="content col-md-8 right">
       <div>
         <div>
           <h3 class="title2"><span>Work Experience<span></h3>
         </div>
         <ul>
-          <li class="e-div e1">
-            <button class="glyphicon glyphicon-plus-sign add"></button>
-            <button class="glyphicon glyphicon-minus-sign remove"></button>
+          <li class="e-div e1"  ng-repeat="item in experience">
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('experience')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('experience', $event)"></button>
             <div class="group">
               <span class="ib3">From:</span>
               <span class="d">//</span>
@@ -77,19 +79,19 @@
             </div>
             <div class="group">
               <span class="ib2">Occupied position:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.position}}</p>
             </div>
             <div class="group">
               <span class="ib2">Employer:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.employer}}</p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.location}}</p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.description}}</p>
             </div>
           </li>
         </ul>
@@ -99,9 +101,9 @@
           <h3 class="title2"><span>Education<span></h3>
         </div>
         <ul>
-          <li class="e-div e1">
-            <button class="glyphicon glyphicon-plus-sign add"></button>
-            <button class="glyphicon glyphicon-minus-sign remove"></button>
+          <li class="e-div e1" ng-repeat="item in education">
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('education')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('education', $event)"></button>
             <div class="group">
               <span class="ib3">From:</span>
               <span class="d">//</span>
@@ -110,19 +112,19 @@
             </div>
             <div class="group">
               <span class="ib2">Title:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.title}}</p>
             </div>
             <div class="group">
               <span class="ib2">Institution:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.institution}}</p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.location}}</p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <p class="ib" contenteditable="true" ng-model="text"></p>
+              <p class="ib" contenteditable="true" ng-model="text">{{item.description}}</p>
             </div>
           </li>
         </ul>
@@ -132,14 +134,14 @@
           <h3 class="title2"><span>Languages<span></h3>
         </div>
         <ul class="e-div">
-          <li>
-            <button class="glyphicon glyphicon-plus-sign add"></button>
-            <button class="glyphicon glyphicon-minus-sign remove"></button>
+          <li ng-repeat="item in language">
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('language')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('language', $event)"></button>
             <div>
               <span class="ib3">Language</span>
-              <p class="d" contenteditable="true" ng-model="text"></p>
+              <p class="d" contenteditable="true" ng-model="text">{{item.language}}</p>
               <span class="ib3">Level</span>
-              <p class="d" contenteditable="true" ng-model="text"></p>
+              <p class="d" contenteditable="true" ng-model="text">{{item.level}}</p>
             </div>
           </li>
         </ul>
@@ -149,14 +151,14 @@
           <h3 class="title2"><span>Aptitudes<span></h3>
         </div>
         <ul class="e-div">
-          <li>
-            <button class="glyphicon glyphicon-plus-sign add"></button>
-            <button class="glyphicon glyphicon-minus-sign remove"></button>
+          <li ng-repeat="item in aptitudes">
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('aptitudes')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('aptitudes', $event)"></button>
             <div>
               <span class="ib3">Skill Area</span>
-              <p class="d" contenteditable="true" ng-model="text"></p>
+              <p class="d" contenteditable="true" ng-model="text">{{item.skillArea}}</p>
               <span class="ib3">Actual Skill</span>
-              <p class="d" contenteditable="true" ng-model="text"></p>
+              <p class="d" contenteditable="true" ng-model="text">{{item.skill}}</p>
             </div>
           </li>
         </ul>

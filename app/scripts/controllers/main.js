@@ -43,7 +43,8 @@ angular.module('cvBuilderApp')
 
     $scope.imageIsLoaded = function (e) {
       $scope.$apply(function () {
-        $scope.personal.src = e.target.result;
+        $scope.allData.personal.src = e.target.result;
+        console.log($scope.allData.personal);
       });
     };
 //      var titleInStore = localStorageService.get('title');

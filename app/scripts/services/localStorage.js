@@ -6,6 +6,7 @@ app.factory('localStorage', function(localStorageService){
     title:  '',
     personal: {
       name: '',
+      src: '',
       address: '',
       email: '',
       telephone: '',

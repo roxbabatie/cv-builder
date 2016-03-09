@@ -13,7 +13,7 @@
           <p class="name-bubble" data-ph="Type your text here..." contenteditable="true" ng-model="allData.personal.name"></p>
         </div>
         <div class="picture-div">
-          <img class="picture" src={{personal.src}}></img>
+          <img class="picture" src={{allData.personal.src}}></img>
           <input type="file"
                  onchange="angular.element(this).scope().imageUpload(event)"/>
         </div>

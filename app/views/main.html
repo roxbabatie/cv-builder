@@ -5,7 +5,7 @@
   </div>
   <div class="col-md-2"></div>
   <div class="col-md-8 shadow doc">
-    <div class="cv-title shadow" data-ph="Type your text here..." contenteditable="true" ng-model="allData.title"></div>
+    <div class="cv-title shadow" data-ph="Untitled CV" contenteditable="true" ng-model="allData.title"></div>
     <div class="sidebar col-md-4 left">
       <div>
         <div>
@@ -69,10 +69,10 @@
         <ul>
           <!--<button ng-click='save()'>save</button>-->
           <!--<button ng-click='load()'>load</button>-->
-          <li class="e-div e1"  >
+          <li class="e-div e1" ng-repeat="item in allData.experience">
 
-            <button class="glyphicon glyphicon-plus-sign add"></button>
-            <button class="glyphicon glyphicon-minus-sign remove" ></button>
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('experience')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove"data-id={{$index}} ng-click="delete('experience', $event)" ></button>
             <div class="group">
               <span class="ib3">From:</span>
               <span class="d">//</span>
@@ -81,19 +81,19 @@
             </div>
             <div class="group">
               <span class="ib2">Occupied position:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.experience.position"></p>
+              <p class="ib"  data-ph="Type your text here..." contenteditable="true" ng-model="item.position"></p>
             </div>
             <div class="group">
               <span class="ib2">Employer:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.experience.employer"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.employer"></p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <p class="ib" placeholder="Type your text here..." contenteditable="true" ng-model="allData.experience.location"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.location"></p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.experience.description"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.description"></p>
             </div>
           </li>
         </ul>
@@ -103,9 +103,9 @@
           <h3 class="title2"><span>Education<span></h3>
         </div>
         <ul>
-          <li class="e-div e1">
-            <button class="glyphicon glyphicon-plus-sign add" ></button>
-            <button class="glyphicon glyphicon-minus-sign remove"></button>
+          <li class="e-div e1" ng-repeat="item in allData.education">
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('education')"></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('education', $event)"></button>
             <div class="group">
               <span class="ib3">From:</span>
               <span class="d">//</span>
@@ -114,19 +114,19 @@
             </div>
             <div class="group">
               <span class="ib2">Title:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.education.title"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.title"></p>
             </div>
             <div class="group">
               <span class="ib2">Institution:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.education.institution"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.institution"></p>
             </div>
             <div class="group">
               <span class="ib2">Location:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.education.location"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.location"></p>
             </div>
             <div class="group">
               <span class="ib2">Description:</span>
-              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="allData.education.description"></p>
+              <p class="ib" data-ph="Type your text here..." contenteditable="true" ng-model="item.description"></p>
             </div>
           </li>
         </ul>
@@ -135,18 +135,18 @@
         <div>
           <h3 class="title2"><span>Languages<span></h3>
         </div>
-        <ul class="e-div">
+        <ul class="e-div" ng-repeat="item in allData.language">
           <li >
             <!--ng-repeat="item in language"-->
-            <button class="glyphicon glyphicon-plus-sign add" ></button>
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('language')"></button>
             <!--ng-click="add('language')"-->
-            <button class="glyphicon glyphicon-minus-sign remove" ></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('language', $event)"></button>
             <!--data-id={{$index}} ng-click="delete('language', $event)"-->
             <div>
               <span class="ib3">Language</span>
-              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="allData.language.languageName"></p>
+              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.languageName"></p>
               <span class="ib3">Level</span>
-              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="allData.language.level"></p>
+              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.level"></p>
             </div>
           </li>
         </ul>
@@ -155,17 +155,17 @@
         <div>
           <h3 class="title2"><span>Aptitudes<span></h3>
         </div>
-        <ul class="e-div">
+        <ul class="e-div" ng-repeat="item in allData.skills">
           <li>
-            <button class="glyphicon glyphicon-plus-sign add"></button>
+            <button class="glyphicon glyphicon-plus-sign add" ng-click="add('skills')"></button>
             <!--ng-click="add('aptitudes')"-->
-            <button class="glyphicon glyphicon-minus-sign remove" ></button>
+            <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('skills', $event)"></button>
             <!--data-id={{$index}} ng-click="delete('aptitudes', $event)"-->
             <div>
               <span class="ib3">Skill Area</span>
-              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="allData.skills.area"></p>
+              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.area"></p>
               <span class="ib3">Actual Skill</span>
-              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="allData.skills.skill"></p>
+              <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.skill"></p>
             </div>
           </li>
         </ul>

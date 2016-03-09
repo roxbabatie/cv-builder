@@ -15,37 +15,23 @@ angular.module('cvBuilderApp')
       'Karma'
     ];
 
-    //$scope.docIndex = localStorage.docIndex;
-    //console.log(localStorage.docIndex);
-    //$scope.allData = localStorage.allData;
-    //console.log($scope.allData);
-    //localStorage.initialStorage;
-    //$scope.text = "Type your text in here..";
-    ////$scope.textTitle = "Untitled CV";
-    //$scope.personal = [];
-    ////$scope.title = localStorageService.get('title') || "UntitledCV";
-    //$scope.textTitle = $scope.title;
-    //$scope.name = {name: $scope.text};
-    //$scope.experience = [{ position: $scope.text, employer: $scope.text, location: $scope.text, description: $scope.text}];
-    //$scope.education = [{title: $scope.text, institution: $scope.text, location: $scope.text, description: $scope.text}];
-    //$scope.language = [{language: $scope.text, level: $scope.text}];
-    //$scope.aptitudes = [{skillArea: $scope.text, skill: $scope.text}];
-    //
-    //console.log("1: ",$scope.title);
+    $scope.docIndex = localStorage.docIndex;
+    $scope.allData = localStorage.allData[$scope.docIndex];
 
-    //$scope.add = function (label) {
-    //
-    //  (label === 'experience') ? $scope.experience.push({ position: $scope.text, employer: $scope.text, location: $scope.text, description: $scope.text}) :
-    //    (label === 'education') ? $scope.education.push ({title:'', institution:'',location:'',description:''}) :
-    //      (label === 'language' ) ? $scope.language.push({language:'',level:''}) : $scope.aptitudes.push({skillArea:'',skill:''})
-    //};
-    //
-    //$scope.delete = function(label, event) {
-    //  var index = $(event.target).data('id');
-    //  (label === 'experience') ? $scope.experience.splice(index, 1) :
-    //    (label === 'education') ? $scope.education.splice(index, 1) :
-    //      (label === 'language') ?  $scope.language.splice(index, 1) : $scope.aptitudes.splice(index, 1);
-    //};
+    $scope.add = function (label) {
+      (label === 'experience') ? $scope.allData.experience.push({ position: '', employer: '', location: '', description: ''}) :
+        (label === 'education') ? $scope.allData.education.push ({title:'', institution:'',location:'',description:''}) :
+          (label === 'language' ) ? $scope.allData.language.push({language:'',level:''}) :
+            (label === 'personal') ? $scope.allData.personal.push({ name: '', address: '', email: '', telephone: '', instant: ''}) : $scope.allData.skills.push({skillArea:'',skill:''});
+    };
+
+    $scope.delete = function(label, event) {
+      var index = $(event.target).data('id');
+      (label === 'experience') ? $scope.allData.experience.splice(index, 1) :
+        (label === 'education') ? $scope.allData.education.splice(index, 1) :
+          (label === 'language') ?  $scope.allData.language.splice(index, 1) :
+            (label === 'personal') ? $scope.allData.personal.splice(index, 1) : $scope.allData.skills.splice(index, 1);
+    };
 
     $scope.imageUpload = function (event) {
 

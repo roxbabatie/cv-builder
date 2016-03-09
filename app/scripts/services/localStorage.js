@@ -9,7 +9,7 @@ app.factory('localStorage', function(localStorageService){
       address: '',
       email: '',
       telephone: '',
-      instant: '',
+      instant: ''
     },
     experience: [
       {
@@ -45,12 +45,14 @@ app.factory('localStorage', function(localStorageService){
 
   var initialStorage = function () {
     if (localStorageService.get('allData') === null){
-
       allData.push(emptyData);
-
-      localStorageService.set('allData', JSON.stringify(allData))
+      localStorageService.set('allData', allData);
+    }
+    else {
+      allData = localStorageService.get('allData');
     }
   }();
+
 
   return {
     allData: allData,

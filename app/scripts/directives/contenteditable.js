@@ -2,7 +2,7 @@ app.directive("contenteditable", function() {
   return {
     require: "ngModel",
     restrict: 'A',
-    scope: true,
+    //scope: true,
     link: function(scope, element, attrs, ngModel) {
 
       function read() {
@@ -18,9 +18,9 @@ app.directive("contenteditable", function() {
       });
 
       element.bind("click", function() {
-          if ($(this).text() === "Type your text in here..." || $(this).text() === "Untitled CV") {
-            $(this).text("");
-          }
+        if ($(this).text() === "Type your text in here..." || $(this).text() === "Untitled CV") {
+          $(this).text("");
+        }
         element.removeClass("hover-class");
         element.addClass("focus-class");
       });
@@ -32,7 +32,7 @@ app.directive("contenteditable", function() {
           }else {
             element.addClass("hover-class");
           }
-          })
+        })
       });
 
       element.bind("mouseleave", function() {
@@ -53,4 +53,3 @@ app.directive("contenteditable", function() {
     }
   };
 });
-

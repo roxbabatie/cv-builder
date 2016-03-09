@@ -322,3 +322,7 @@ input[type='file'] {
 .left, .right {
   height: 620px;
 }
+
+[contenteditable=true]:empty:not(:focus):before{
+  content:attr(data-ph)
+}

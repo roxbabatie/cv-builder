@@ -70,7 +70,6 @@
           <button ng-click='save()'>save</button>
           <button ng-click='load()'>load</button>
           <li class="e-div e1" ng-repeat="item in allData.experience">
-
             <button class="glyphicon glyphicon-plus-sign add" ng-click="add('experience')"></button>
             <button class="glyphicon glyphicon-minus-sign remove"data-id={{$index}} ng-click="delete('experience', $event)" ></button>
             <div class="group">
@@ -137,11 +136,8 @@
         </div>
         <ul class="e-div" ng-repeat="item in allData.language">
           <li >
-            <!--ng-repeat="item in language"-->
             <button class="glyphicon glyphicon-plus-sign add" ng-click="add('language')"></button>
-            <!--ng-click="add('language')"-->
             <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('language', $event)"></button>
-            <!--data-id={{$index}} ng-click="delete('language', $event)"-->
             <div>
               <span class="ib3">Language</span>
               <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.languageName"></p>
@@ -158,9 +154,7 @@
         <ul class="e-div" ng-repeat="item in allData.skills">
           <li>
             <button class="glyphicon glyphicon-plus-sign add" ng-click="add('skills')"></button>
-            <!--ng-click="add('aptitudes')"-->
             <button class="glyphicon glyphicon-minus-sign remove" data-id={{$index}} ng-click="delete('skills', $event)"></button>
-            <!--data-id={{$index}} ng-click="delete('aptitudes', $event)"-->
             <div>
               <span class="ib3">Skill Area</span>
               <p class="d" data-ph="Type your text here..." contenteditable="true" ng-model="item.area"></p>

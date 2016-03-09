@@ -2,7 +2,6 @@ app.directive("contenteditable", function() {
   return {
     require: "ngModel",
     restrict: 'A',
-    //scope: true,
     link: function(scope, element, attrs, ngModel) {
 
       function read() {

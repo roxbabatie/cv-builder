@@ -51,41 +51,4 @@ angular.module('cvBuilderApp')
       console.log("set: ", localStorage.setLocalStorage);
       $scope.$watch('allData', localStorage.setLocalStorage, true);
     };
-    //var allDataInStore = localStorage.
-//      var titleInStore = localStorageService.get('title');
-//    //console.log(titleInStore);
-//    //$scope.textTitle = titleInStore || '';
-//    //  var experienceInStore = localStorageService.get('experience');
-//    //  $scope.experience = experienceInStore || [];
-//    //console.log("experienceInStore: ",experienceInStore);
-//    //console.log("$scope.experience: ", $scope.experience[1].position);
-//
-//  $scope.save = function() {
-//    console.log("2: ", $scope.title);
-//    $scope.$watch('title',function() {
-//      localStorageService.set('title', $scope.title);
-//    },true )
-//    //console.log("experienceInStore: ",experienceInStore);
-//    //console.log("$scope.experience: ", $scope.experience[1].position);
-//    //$scope.$watch('experience', $scope.change,true);
-//    //$localStorage.experience = experience;
-//    //window.$localStorage.set('experience', JSON.stringify($scope.experience));
-//};
-//
-//    //$scope.change = function() {
-//    //  localStorageService.set('experience', $scope.experience);
-//    //  console.log($scope.experience);
-//    //
-//    //}
-//    $scope.load = function() {
-//      console.log("3: ", $scope.title);
-//      $scope.$watch('title', function() {
-//       console.log("before save: ", $scope.title);
-//      },true);
-//    //$scope.experience = $localStorage.experience;
-//    }
-
-
-
-
   });

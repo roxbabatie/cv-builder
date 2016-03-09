@@ -338,3 +338,10 @@ input[type='file'] {
   font-size: 15px;
 
 }
+
+.newDoc {
+  height: 200px;
+  width: 100px;
+  background-color: white;
+  border: 1px solid black;
+}

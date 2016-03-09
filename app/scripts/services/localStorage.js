@@ -58,11 +58,17 @@ app.factory('localStorage', function(localStorageService){
     localStorageService.set('allData', allData);
   };
 
+  var newCv = function () {
+    var create = angular.copy(emptyData);
+    allData.push(create);
+    console.log("allData: ", allData);
+  };
 
   return {
     allData: allData,
     docIndex: docIndex,
     emptyData: emptyData,
-    setLocalStorage: setLocalStorage
+    setLocalStorage: setLocalStorage,
+    newCv: newCv
   }
 });

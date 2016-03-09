@@ -27,14 +27,14 @@ angular.module('cvBuilderApp')
 
     $scope.delete = function(label, event) {
       var index = $(event.target).data('id');
-      (label === 'experience') ? $scope.allData.experience.splice(index, 1) :
-        (label === 'education') ? $scope.allData.education.splice(index, 1) :
-          (label === 'language') ?  $scope.allData.language.splice(index, 1) :
-            (label === 'personal') ? $scope.allData.personal.splice(index, 1) : $scope.allData.skills.splice(index, 1);
+      ((label === 'experience') && (index != 0)) ? $scope.allData.experience.splice(index, 1) :
+        ((label === 'education') && (index != 0)) ? $scope.allData.education.splice(index, 1) :
+          ((label === 'language') && (index != 0)) ?  $scope.allData.language.splice(index, 1) :
+            ((label === 'persona') && (index != 0)) ? $scope.allData.personal.splice(index, 1) :
+              ((label === 'skills') && (index != 0)) ? $scope.allData.skills.splice(index, 1) : alert("requiered field. cannot remove")
     };
 
     $scope.imageUpload = function (event) {
-
       var files = event.target.files;
       var reader = new FileReader();
       reader.onload = $scope.imageIsLoaded;

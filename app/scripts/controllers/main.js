@@ -14,7 +14,14 @@ angular.module('cvBuilderApp')
       'AngularJS',
       'Karma'
     ];
-
+    $scope.view = '';
+    $scope.docsView = function () {
+      if ($scope.view == '') {
+        $scope.view = 'docs';
+      } else {
+        $scope.currentView = '';
+      }
+    };
     $scope.docIndex = localStorage.docIndex;
     $scope.allData = localStorage.allData[$scope.docIndex];
     $scope.add = function (label) {

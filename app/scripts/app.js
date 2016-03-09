@@ -19,28 +19,35 @@ var app = angular
     'LocalStorageModule'
   ]);
 
+
 app.config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('ls');
-  }])
+  }]);
 
-  .config(function ($routeProvider) {
+app.config(function ($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/docs', {
+        templateUrl: 'views/docs.html',
+        controller: 'DocsCtrl',
+        controllerAs: 'docs'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+
+
+
 
 
 

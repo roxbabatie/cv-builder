@@ -1,8 +1,10 @@
 <div class="container col-md-12" ng-controller="MainCtrl">
-  <div class="menu">
-    <span class="caret"></span>
-    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-  </div>
+  <button class="glyphicon glyphicon-ok save" ng-click='save()'> save cv</button>
+  <button class="glyphicon glyphicon-arrow-left save"> Back </button>
+  <!--<div class="menu">-->
+    <!--<span class="caret"></span>-->
+    <!--<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>-->
+  <!--</div>-->
   <div class="col-md-2"></div>
   <div class="col-md-8 shadow doc">
     <div class="cv-title shadow" data-ph="Untitled CV" contenteditable="true" ng-model="allData.title"></div>
@@ -67,8 +69,6 @@
           <h3 class="title2"><span>Work Experience<span></h3>
         </div>
         <ul>
-          <button ng-click='save()'>save</button>
-          <button ng-click='load()'>load</button>
           <li class="e-div e1" ng-repeat="item in allData.experience">
             <button class="glyphicon glyphicon-plus-sign add" ng-click="add('experience')"></button>
             <button class="glyphicon glyphicon-minus-sign remove"data-id={{$index}} ng-click="delete('experience', $event)" ></button>

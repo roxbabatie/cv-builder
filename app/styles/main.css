@@ -326,3 +326,15 @@ input[type='file'] {
 [contenteditable=true]:empty:not(:focus):before{
   content:attr(data-ph)
 }
+
+.save {
+  background-color: #85cb85;
+  height: 30px;
+  width: 120px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+
+}

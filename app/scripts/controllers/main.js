@@ -17,7 +17,6 @@ angular.module('cvBuilderApp')
 
     $scope.docIndex = localStorage.docIndex;
     $scope.allData = localStorage.allData[$scope.docIndex];
-
     $scope.add = function (label) {
       (label === 'experience') ? $scope.allData.experience.push({ position: '', employer: '', location: '', description: ''}) :
         (label === 'education') ? $scope.allData.education.push ({title:'', institution:'',location:'',description:''}) :
@@ -47,6 +46,12 @@ angular.module('cvBuilderApp')
         console.log($scope.allData.personal);
       });
     };
+
+    $scope.save = function() {
+      console.log("set: ", localStorage.setLocalStorage);
+      $scope.$watch('allData', localStorage.setLocalStorage, true);
+    };
+    //var allDataInStore = localStorage.
 //      var titleInStore = localStorageService.get('title');
 //    //console.log(titleInStore);
 //    //$scope.textTitle = titleInStore || '';

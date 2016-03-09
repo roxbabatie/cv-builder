@@ -54,13 +54,15 @@ app.factory('localStorage', function(localStorageService){
     }
   }();
 
+  var setLocalStorage = function() {
+    localStorageService.set('allData', allData);
+  };
+
 
   return {
     allData: allData,
     docIndex: docIndex,
-    emptyData: emptyData
+    emptyData: emptyData,
+    setLocalStorage: setLocalStorage
   }
 });
-
-
-

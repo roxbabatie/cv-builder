@@ -167,7 +167,7 @@ button {
 .d {
   color: #2B798D;
   display: inline-block;
-  width: 20%;
+  width: 30%;
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   padding: 0 5px;
@@ -321,4 +321,11 @@ input[type='file'] {
 
 .left, .right {
   height: 620px;
+}
+
+.md-button {
+  position: absolute;
+  width: 100px;
+  height: 16px;
+  margin-left: -100px;
 }

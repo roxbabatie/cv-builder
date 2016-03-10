@@ -14,8 +14,7 @@ var app = angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngSanitize'
   ]);
 
 app.config(function ($routeProvider) {

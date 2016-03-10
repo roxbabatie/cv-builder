@@ -48,7 +48,4 @@ angular.module('cvBuilderApp')
         $scope.personal.src = e.target.result;
       });
     };
-
-
-  })
-;
+  });

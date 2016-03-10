@@ -1,6 +1,7 @@
 'use strict';
 app.factory('localStorage', function(localStorageService){
   var allData = [];
+
   var docIndex = 0;
   var emptyData = {
     title:  '',
@@ -48,6 +49,7 @@ app.factory('localStorage', function(localStorageService){
   };
 
   var initialStorage = function () {
+
     if (localStorageService.get('allData') === null){
       allData.push(emptyData);
       localStorageService.set('allData', allData);

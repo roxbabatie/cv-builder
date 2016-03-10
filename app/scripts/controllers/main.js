@@ -24,6 +24,7 @@ angular.module('cvBuilderApp')
     };
     $scope.docIndex = localStorage.docIndex;
     $scope.allData = localStorage.allData[$scope.docIndex];
+    console.log("all:", $scope.allData);
     $scope.add = function (label) {
       (label === 'experience') ? $scope.allData.experience.push({ position: '', employer: '', location: '', description: ''}) :
         (label === 'education') ? $scope.allData.education.push ({title:'', institution:'',location:'',description:''}) :

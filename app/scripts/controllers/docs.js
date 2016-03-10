@@ -16,6 +16,9 @@ angular.module('cvBuilderApp')
     ];
 
 
+
+    $scope.allData = localStorage.allData;
+    $scope.newCv = localStorage.newCv;
     $scope.view = 'docs';
     $scope.cvView = function () {
       if ($scope.view == 'docs') {
@@ -26,13 +29,18 @@ angular.module('cvBuilderApp')
     };
 
 
-    $scope.allData = localStorage.allData[localStorage.docIndex];
-    $scope.newCv = localStorage.newCv;
     console.log($scope.newCv);
-    $scope.loadNewCv = function (index) {
+    console.log(localStorage.docIndex);
+    $scope.loadCv = function (index) {
+      console.log(localStorage.docIndex);
       localStorage.docIndex = index;
-      console.log("haha");
+      //console.log($scope.docIndex)
 
+    };
+
+    $scope.deleteCv = function (index) {
+      localStorage.deleteCv(index);
+      console.log(index);
     };
 
   });

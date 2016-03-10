@@ -10,7 +10,10 @@ app.factory('localStorage', function(localStorageService){
       address: '',
       email: '',
       telephone: '',
-      instant: ''
+      instant: '',
+      licenseY: false,
+      licenseN: false
+
     },
     experience: [
       {
@@ -64,11 +67,18 @@ app.factory('localStorage', function(localStorageService){
     console.log("allData: ", allData);
   };
 
+  var deleteCv = function (index) {
+    allData.splice(index, 1);
+    localStorageService.remove('allData');
+    console.log(allData);
+  };
+
   return {
     allData: allData,
     docIndex: docIndex,
     emptyData: emptyData,
     setLocalStorage: setLocalStorage,
-    newCv: newCv
+    newCv: newCv,
+    deleteCv: deleteCv
   }
 });

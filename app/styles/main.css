@@ -339,9 +339,11 @@ input[type='file'] {
 
 }
 
-.newDoc {
+.newDoc, .edited {
   height: 200px;
   width: 100px;
   background-color: white;
   border: 1px solid black;
+  display: inline-block;
+  margin-left: 20px;
 }

@@ -1,6 +1,13 @@
 <a class="glyphicon glyphicon-arrow-left save" ng-href='/{{view}}' ng-click="cvView()"> Back </a>
 <div class="container" ng-controller="DocsCtrl">
 <div class="newDoc">
-  <a class="glyphicon glyphicon-plus-sign" ng-href='/{{view}}' ng-click="newCv(); cvView();loadNewCv()"></a>
+  <a class="glyphicon glyphicon-plus-sign" ng-href='/{{view}}' ng-click="newCv(); cvView(); loadCv($index)"></a>
+</div>
+
+  <div class ="edited" ng-repeat="item in allData" ng-click="loadCv($index); cvView()">
+    <a class="glyphicon glyphicon-minus-sign" ng-click="deleteCv($index)"></a>
+    <!--<a href="/#docs"></a>-->
+
+
 </div>
 </div>

@@ -15,26 +15,39 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'LocalStorageModule'
   ]);
 
-app.config(function ($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'views/main.html',
-      controller: 'MainCtrl'
-    })
-    .when('/about', {
-      templateUrl: 'views/about.html',
-      controller: 'AboutCtrl'
-    })
-    .when('/about', {
-      templateUrl: 'views/about.html',
-      controller: 'AboutCtrl'
-    })
-    .otherwise({
-      redirectTo: '/'
+
+app.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }]);
+
+app.config(function ($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
     });
-});
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/docs', {
+        templateUrl: 'views/docs.html',
+        controller: 'DocsCtrl',
+        controllerAs: 'docs'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
+
+
+
+
+
 
 

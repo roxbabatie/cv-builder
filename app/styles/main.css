@@ -322,3 +322,28 @@ input[type='file'] {
 .left, .right {
   height: 620px;
 }
+
+[contenteditable=true]:empty:not(:focus):before{
+  content:attr(data-ph)
+}
+
+.save {
+  background-color: #85cb85;
+  height: 30px;
+  width: 120px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+
+}
+
+.newDoc, .edited {
+  height: 200px;
+  width: 100px;
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  margin-left: 20px;
+}
